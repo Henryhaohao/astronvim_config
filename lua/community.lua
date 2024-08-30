@@ -7,7 +7,10 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
-  "GustavoPrietoP/doom-themes.nvim",
   { import = "astrocommunity.pack.lua" },
   -- import/override with your plugins folder
+
+  -- Add New
+  "GustavoPrietoP/doom-themes.nvim",
+  { import = "astrocommunity.recipes.neovide" },
 }
