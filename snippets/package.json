@@ -1,0 +1,127 @@
+{
+  "name": "user_snippets",
+  "engines": {
+    "vscode": "^1.11.0"
+  },
+  "contributes": {
+    "language": [
+      {
+        "id": "goctl",
+        "aliases": [
+          "goctl"
+        ],
+        "extensions": [
+          ".api"
+        ],
+        "configuration": "./language/golang/goctl.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": [
+          "plaintext",
+          "markdown",
+          "tex",
+          "html",
+          "global",
+          "all"    
+        ],
+        "path": "./global.json"
+      },
+      {
+        "language": ["license"],
+        "path": "./license.json"
+      },
+      {
+        "language": "yaml",
+        "path": "./docker/docker-compose.json"
+      },
+      {
+        "language": "yaml",
+        "path": "./docker/docker-compose.json"
+      },
+      {
+        "language": "yaml",
+        "path": "./docker/kubernetes.json"
+      },
+      {
+        "language": [
+          "typescript",
+          "javascriptreact",
+          "typescriptreact"
+        ],
+        "path": "./frameworks/react.json"
+      },
+      {
+        "language": "vue",
+        "path": "./frameworks/vue.json"
+      },
+      {
+        "language": [
+          "html",
+          "jade",
+          "pug",
+          "eruby",
+          "javascriptreact",
+          "typescriptreact",
+          "htmldjango",
+          "astro",
+		      "blade"
+        ],
+        "path": "./frameworks/html.json"
+      },
+      {
+        "language": "go",
+        "path": "./language/golang/go.json"
+      },
+      {
+        "language": "java",
+        "path": "./language/java/java.json"
+      },
+      {
+        "language": "java",
+        "path": "./language/java/javadoc.json"
+      },
+      {
+        "language": "lua",
+        "path": "./language/lua/lua.json"
+      },
+      {
+        "language": "lua",
+        "path": "./language/lua/luadoc.json"
+      },
+      {
+        "language": ["markdown", "rmd"],
+        "path": "./language/markdown/markdown.json"
+      },
+      {
+        "language": "python",
+        "path": "./language/python/python.json"
+      },
+      {
+        "language": "python",
+        "path": "./language/python/pydoc.json"
+      },
+      {
+        "language": "rust",
+        "path": "./language/rust/rust.json"
+      },
+      {
+        "language": "rust",
+        "path": "./language/rust/rustdoc.json"
+      },
+      {
+        "language": ["shell", "shellscript", "sh", "zsh", "fish", "bash"],
+        "path": "./language/shell/shell.json"
+      },
+      {
+        "language": ["shell", "shellscript", "sh", "zsh", "fish", "bash"],
+        "path": "./language/shell/shelldoc.json"
+      },
+      {
+        "language": "sql",
+        "path": "./language/sql/sql.json"
+      }
+    ]
+  }
+}

@@ -1,6 +1,12 @@
+# 配置 Selene 或 Luacheck 之类的静态代码分析工具，专门用于 Neovim 环境中的 Lua 脚本开发。它的作用是指定哪些全局变量可以在代码中使用，以及使用的 Lua 版本，以便静态分析器正确地分析你的 Lua 代码
+
 ---
 base: lua51
 
 globals:
   vim:
+    any: true
+  jit:
+    any: true
+  astronvim:
     any: true

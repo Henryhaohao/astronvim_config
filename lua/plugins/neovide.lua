@@ -5,27 +5,32 @@ if not vim.g.neovide then
 end
 
 return {
-  "AstroNvim/astrocore",
-  ---@type AstroCoreOpts
-  opts = {
-    options = {
-      opt = { -- configure vim.opt options
-        -- configure font
-        guifont = "JetBrainsMono Nerd Font:h14",
-        -- line spacing
-        linespace = 0,
-      },
-      g = { -- configure vim.g variables
-        neovide_fullscreen = true,
-        neovide_no_idle = true, -- 不会进入空闲状态，持续渲染，减少视觉滞后，提高动画流畅度
-        neovide_confirm_quit = true,
-        -- configure scalling
-        neovide_scale_factor = 1.0,
-        -- configure padding
-        neovide_padding_top = 3,
-        neovide_padding_botton = 0,
-        neovide_padding_right = 0,
-        neovide_padding_left = 0,
+  "AstroNvim/astrocommunity",
+  { import = "astrocommunity.recipes.neovide" },
+  {
+    "AstroNvim/astrocore",
+    ---@type AstroCoreOpts
+    opts = {
+      options = {
+        opt = { -- configure vim.opt options
+          -- configure font
+          guifont = "JetBrainsMono Nerd Font:h14",
+          -- line spacing
+          linespace = 0,
+        },
+        g = { -- configure vim.g variables
+          neovide_fullscreen = true,
+          neovide_transparency = 0.9, --背景透明度
+          neovide_no_idle = true, -- 不会进入空闲状态，持续渲染，减少视觉滞后，提高动画流畅度
+          neovide_confirm_quit = true,
+          -- configure scalling
+          neovide_scale_factor = 1.0,
+          -- configure padding
+          neovide_padding_top = 3,
+          neovide_padding_botton = 0,
+          neovide_padding_right = 0,
+          neovide_padding_left = 0,
+        },
       },
     },
   },

@@ -1,0 +1,75 @@
+-- local M = {}
+
+-- M.closed = false
+
+-- local function all_trim(s) return s:match "^%s*(.-)%s*$" end
+--
+-- -- 确定操作系统
+-- local function determine_os()
+--   if vim.fn.has "macunix" == 1 then
+--     return "macOS"
+--   elseif vim.fn.has "win32" == 1 then
+--     return "Windows"
+--   elseif vim.fn.has "wsl" == 1 then
+--     return "WSL"
+--   else
+--     return "Linux"
+--   end
+-- end
+--
+-- -- 判断是否支持
+-- local function is_supported()
+--   local os = determine_os()
+--   if os ~= "Linux" then return true end
+--
+--   local ims = { "fcitx5-remote", "fcitx-remote", "ibus" }
+--   for _, im in ipairs(ims) do
+--     if vim.fn.executable(im) then return true end
+--   end
+-- end
+--
+-- -- local config
+-- local C = {
+--   default_command = "ibus", -- 使用 IBus 作为输入法管理工具
+--   -- default_method_selected = "xkb:us::eng", -- 默认英文输入法
+--   default_main_select = "libpinyin", -- 使用 libpinyin 中文输入法
+--   set_default_events = { "VimEnter", "FocusGained", "InsertLeave", "CmdlineLeave" },
+--   set_previous_events = { "InsertEnter", "FocusLost" },
+--   async_switch_im = true,
+-- }
+--
+-- -- 配置中文字符检测
+-- local function set_input_method_based_on_context()
+--   local line = vim.api.nvim_get_current_line()
+--   local col = vim.api.nvim_win_get_cursor(0)[2]
+--
+--   local char_before = col > 0 and line:sub(col, col) or ""
+--   local char_after = col < #line and line:sub(col + 2, col + 2) or ""
+--
+--   local is_chinese = function(char)
+--     return char:match "[\u4e00-\u9fff]" -- 检查是否为中文字符
+--   end
+--
+--   -- 如果前后有中文字符，切换到中文输入法
+--   if is_chinese(char_before) or is_chinese(char_after) then
+--     os.execute "ibus engine 'libpinyin'"
+--   else
+--     os.execute "ibus engine 'xkb:us::eng'"
+--   end
+-- end
+--
+-- -- 应用配置
+-- M.setup = function(opts)
+--   -- if not is_supported() then return end
+--
+--   vim.api.nvim_create_autocmd({ "InsertEnter" }, {
+--     callback = set_input_method_based_on_context, -- 插入模式时检测字符
+--   })
+--
+--   -- 自动切换输入法
+--   vim.api.nvim_create_autocmd(C.set_default_events, {
+--     callback = function() os.execute "ibus engine 'xkb:us::eng'" end, -- 恢复到英文
+--   })
+-- end
+--
+-- return M

@@ -1,4 +1,5 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- Neovim LSP (Language Server Protocol) 是 Neovim 内置的一个用于提供智能代码编辑功能的框架，
+-- 它通过与外部的语言服务器交互，向开发者提供诸如 代码补全、语法检查、跳转到定义、重命名、诊断 等功能。
 
 -- AstroLSP allows you to customize the features in AstroNvim's LSP configuration engine
 -- Configuration documentation can be found with `:h astrolsp`

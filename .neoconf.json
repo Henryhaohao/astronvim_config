@@ -1,3 +1,5 @@
+// 帮助开发者编写 Neovim 配置和插件时提供更好的 Lua 开发体验
+
 {
   "neodev": {
     "library": {

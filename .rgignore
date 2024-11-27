@@ -1,0 +1,7 @@
+# 配置 ripgrep 工具的忽略规则文件，类似于 .gitignore，但专门用于 ripgrep 的搜索操作。
+
+# 忽略所有名为 node_modules 的目录
+node_modules/
+
+# 忽略所有扩展名为 .log 的文件
+*.log

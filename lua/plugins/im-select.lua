@@ -1,0 +1,31 @@
+-- -- 用于在不同输入模式之间切换输入法，特别是在输入文本时切换输入法以保持一致性
+-- ---@type LazySpec
+-- return {
+--   "chaozwn/im-select.nvim",
+--   lazy = false, -- 取消懒加载，启动时加载插件
+--   opts = {
+--     default_command = "ibus", -- 使用 ibus 命令来切换输入法
+--     default_main_select = "libpinyin", -- 默认输入法设定为中文智能拼音
+--     set_previous_events = { "InsertEnter", "FocusLost" }, -- 在插入模式和焦点丢失时设置输入法
+--     -- 自定义命令来切换输入法
+--     -- set_input_method = function(select)
+--     --   -- 获取当前光标前后的字符
+--     --   local line = vim.api.nvim_get_current_line()
+--     --   local col = vim.api.nvim_win_get_cursor(0)[2]
+--     --
+--     --   -- 获取光标前后的字符
+--     --   local char_before = col > 0 and line:sub(col, col) or ""
+--     --   local char_after = col < #line and line:sub(col + 2, col + 2) or ""
+--     --
+--     --   -- 判断字符是否为中文（利用 Unicode 范围）
+--     --   local is_chinese = function(char) return char:match "[\u4e00-\u9fff]" end
+--     --
+--     --   -- 如果光标前后的字符有中文，则切换到拼音输入法
+--     --   if is_chinese(char_before) or is_chinese(char_after) then
+--     --     os.execute "ibus engine 'libpinyin'" -- 切换到 libpinyin
+--     --   else
+--     --     os.execute "ibus engine 'xkb:us::eng'" -- 否则切换到英文
+--     --   end
+--     -- end,
+--   },
+-- }
